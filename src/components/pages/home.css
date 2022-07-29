@@ -1,0 +1,49 @@
+.home {
+    width: 100%;
+}
+
+.all-products {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    width: 70%;
+    overflow-X: hidden;
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-container {
+    display: grid;
+    width: max-content;
+    margin: auto;
+    float: right;
+    padding: 20px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+.product-container .product-img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-container .product-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.filter {
+    position: fixed;
+    display: grid;
+    top: 100px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.filter span {
+    color: aliceblue;
+    cursor: pointer;
+}
