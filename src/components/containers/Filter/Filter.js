@@ -4,10 +4,14 @@ import Rating from './Rating'
 
 const Filter = () => {
 
-    const [rating, setRating] = useState(4)
+    const [rating, setRating] = useState(0);
+
+    const clearFilter = () => {
+        setRating(-1)
+    }
 
   return (
-    <div className='filter'>
+    <div className='filter bg-dark'>
         <span className="title">Filter Products</span>
         <span>
             <Form.Check
@@ -43,13 +47,18 @@ const Filter = () => {
                 name= "group1"
                 type='checkbox'
                 id={`inline-4`}
+                style={{cursor: "pointer"}}
             />
         </span>
         <span>
-            <label style={{padding: 10}}>Rating:</label>
-            <Rating onClick={(i) => setRating(i)} rating={rating} style={{cursor: "pointer"}}/>
+            <label style={{padding: "10 0"}}>Rating:</label>
+            <Rating 
+                rating={rating}
+                onClick={(i) => setRating(i)}
+                style={{padding:"0 2px"}}
+            />
         </span>
-        <Button variant='light'>Clear Filter</Button>
+        <Button variant='light' onClick={clearFilter}>Clear Filter</Button>
     </div>
   )
 }

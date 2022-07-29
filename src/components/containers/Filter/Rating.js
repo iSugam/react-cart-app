@@ -1,22 +1,22 @@
 import React from 'react'
-import { BsStarFill, BsStar } from "react-icons/bs"
+import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 const Rating = ({ rating, onClick, style}) => {
   return (
-    <div>
+    <>
         {
             [...Array(5)].map((_, i) => {
-                <span key={i} onClick={()=> onClick(i)} style={style}>
+                return <span key={i} onClick={()=> onClick(i)} style={style}>
                     {
-                        rating > i ? (
-                            <BsStarFill fontSize = "25px" />
+                        rating >= i ? (
+                            <AiFillStar fontSize = "20px" />
                         ) :
-                            <BsStar fontSize = "25px" />
+                            <AiOutlineStar fontSize = "20px" />
                     }
                 </span>
             })
         }
-    </div>
+    </>
   )
 }
 
