@@ -2,7 +2,6 @@ import React from 'react'
 import { RiShoppingCart2Fill } from "react-icons/ri"
 
 const SingleProduct = ({ product }) => {
-    console.log(product);
     const { name, image, price, inStock, rating } = product;
   return (
     <div className='product-container'>
