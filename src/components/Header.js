@@ -26,7 +26,7 @@ const Header = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu style={{minWidth: 370}}>
-                        <span alignLeft style={{padding: 10}}>Cart is Empty!</span>
+                        <span style={{padding: 10}}>Cart is Empty!</span>
                     </Dropdown.Menu>
                 </Dropdown>
             </Nav>
