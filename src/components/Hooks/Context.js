@@ -6,15 +6,15 @@ const Cart = createContext();
 
 const Context = ({ children }) => {
 
-    const products = [...Array(20)].map(() => ({
-        id: faker.datatype.uuid(),
-        name: faker.commerce.productName(),
-        price: faker.commerce.price(),
-        image: faker.image.dataUri(),
-        inStock: faker.random.numeric(),
-        fastDelivery: faker.datatype.boolean(),
-        rating: 4
-    }))
+  const products = [...Array(20)].map(() => ({
+      id: faker.datatype.uuid(),
+      name: faker.commerce.productName(),
+      price: faker.commerce.price(),
+      image: faker.image.image(1234, 2345, true),
+      inStock: faker.random.numeric(),
+      fastDelivery: faker.datatype.boolean(),
+      rating: 4
+  }))
 
     const [state, dispatch] = useReducer(cartReducer, {
         products,
