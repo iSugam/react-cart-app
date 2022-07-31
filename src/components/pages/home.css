@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
 .home {
     width: 100%;
+}
+
+.cartItems {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #0004;
+}
+
+.cartItems img {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.cart-name-price {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.cart-name-price span {
+    display: block;
+    font-family: 'Alata', sans-serif;
+}
+.cart-name-price span:last-child {
+    margin-top: 2px;
 }
 
 .all-products {
@@ -25,4 +57,26 @@
 .filter span {
     color: aliceblue;
     cursor: pointer;
+}
+
+.cart-page {
+    margin-top: 80px;
+    padding: 2rem;
+    width: 100%;
+}
+
+.cart-page .cart-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.cart-page .cart-items img {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+}
+
+.total {
+    height: 75vh;
 }
