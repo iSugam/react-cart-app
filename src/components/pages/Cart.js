@@ -22,7 +22,7 @@ const Cart = () => {
                 cart.map(item => {
                   const {id, name, price, image, rating, inStock, qty} = item
                   
-                    return <ListGroup.Item key={id}s>
+                    return <ListGroup.Item key={id} style={{marginTop: 20, border: "1px solid #0003", borderRadius: 5}}>
                       <Row>
                         <Col md={2}>
                           <img src={image} alt={`image of ${name}`} />
@@ -34,13 +34,23 @@ const Cart = () => {
                         </Col>
 
                         <Col md={2}>
-                          <Form.Control as="select" value={qty}>
-                            {
-                              [...Array(inStock).keys()].map(stock => (
-                                <option key={stock + 1}>{stock + 1}</option>
-                              ))
-                            }
-                          </Form.Control>
+                          <Form.Select 
+                            value={qty}
+                            onChange={e => dispatch({
+                              type: "CHANGE_CART_QTY",
+                              payload: {
+                                id,
+                                qty: Number(e.target.value)
+                              }
+                            })}
+                          >
+                            <option value={1}>1</option>
+                            <option value={2}>2</option>
+                            <option value={3}>3</option>
+                            <option value={4}>4</option>
+                            <option value={5}>5</option>
+                            
+                          </Form.Select>
                         </Col>
 
                         <Col md={2}> 
@@ -50,7 +60,7 @@ const Cart = () => {
                                     payload: item
                                 })}
                                 color = "black"
-                                fontSize={60}
+                                fontSize={40}
                                 padding={20}
                                 cursor = "pointer"
                             />
