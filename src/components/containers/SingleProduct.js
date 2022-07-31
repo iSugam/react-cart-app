@@ -9,7 +9,14 @@ const SingleProduct = ({ product }) => {
   return (
     <div className='products'>
         <Card>
-          <Card.Img variant='top' src={image} alt={`image of ${image}`}/>
+          <Card.Img variant='top' src={image} alt={`image of ${image}`}
+            style={{
+              width: "200px",
+              aspectRatio: 1 / 1,
+              objectFit: "cover",
+              margin: "0 auto"
+            }}
+          />
 
           <Card.Body>
             <Card.Title>{name}</Card.Title>
@@ -22,6 +29,7 @@ const SingleProduct = ({ product }) => {
               }  
               <Rating rating={rating} />
             </Card.Subtitle>
+            <p>Item Left: {inStock}</p>
 
               {
                 cart.some(prod => prod.id === id) ? <Button onClick={() => dispatch({
