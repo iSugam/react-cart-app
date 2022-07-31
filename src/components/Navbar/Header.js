@@ -30,7 +30,19 @@ const Header = () => {
                         <Badge bg='dark'>{cart.length}</Badge>
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu style={{minWidth: 300, width: 370, maxWidth: 370, padding: 20}}>
+                    <Dropdown.Menu 
+                        style={
+                            {
+                                minWidth: 300, 
+                                width: 370, 
+                                maxWidth: 370, 
+                                padding: 20, 
+                                minHeight: "100%",
+                                maxHeight: 400, 
+                                overflowY: "scroll", 
+                                overflowX: "hidden"
+                            }}
+                    >
                         {/* CART Items in dropdown menu */}
                         {
                             cart.length > 0 ?
