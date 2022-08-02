@@ -25,7 +25,7 @@ const Context = ({ children }) => {
     byPrice: false,
     byStock: false,
     byFastDelivery: false,
-    byRating: 0,
+    byRating: -1,
     searchQuery: ""
   })
 
