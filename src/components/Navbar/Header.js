@@ -18,7 +18,7 @@ const Header = () => {
             </Navbar.Brand>
             <Navbar.Text className='search'>
                 <FormControl 
-                    style={{width: 500}}
+                    style={{width: "50vw"}}
                     placeholder="Search products..."
                     className='m-auto'
                     onChange={(e) => {
@@ -41,14 +41,15 @@ const Header = () => {
                     <Dropdown.Menu 
                         style={
                             {
-                                minWidth: 300, 
+                                minWidth: 200, 
                                 width: 370, 
                                 maxWidth: 370, 
                                 padding: 20, 
                                 minHeight: "100%",
                                 maxHeight: 400, 
                                 overflowY: "scroll", 
-                                overflowX: "hidden"
+                                overflowX: "hidden",
+                                float: "right"
                             }}
                     >
                         {/* CART Items in dropdown menu */}
