@@ -7,7 +7,8 @@ import { CartContext } from '../Hooks/Context';
 
 const Header = () => {
 
-    const {state: { cart }, dispatch} = CartContext()
+    const {state: { cart }, dispatch} = CartContext(); // For Adding To Cart
+    const {filterState: {searchQuery}, filterDispatch} = CartContext(); // For Search
 
   return (
     <Navbar bg="info" style={{height: 80, position:"fixed", width:"100%", zIndex: 999, top: 0, left: 0}}>
@@ -20,6 +21,13 @@ const Header = () => {
                     style={{width: 500}}
                     placeholder="Search products..."
                     className='m-auto'
+                    onChange={(e) => {
+                        filterDispatch({
+                            type: "SORT_BY_SEARCH",
+                            payload: e.target.value
+                        })
+                    }}
+                    
                 />
             </Navbar.Text>
 
