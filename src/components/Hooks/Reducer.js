@@ -17,3 +17,36 @@ export const cartReducer = (state, action) => {
             return state;
     }
 }
+
+// For Filtering products
+export const filterReducer = (state, action) => {
+    switch(action.type) {
+        case "SORT_BY_PRICE":
+            return {...state, sort: action.payload};
+
+        case "SORT_BY_STOCK":
+            return {...state, byStock: !state.byStock};
+
+        case "SORT_BY_FASTDELIVERY":
+            return {...state, byFastDelivery: !state.byFastDelivery};
+
+        case "SORT_BY_RATING":
+            return {...state, byRating: action.payload};
+
+        case "SORT_BY_SEARCH":
+            return {...state, searchQuery: action.payload}
+        
+        case "CLEAR_FILTER":
+            return {
+                byAscending: false,
+                byDescending: false,
+                byStock: false,
+                byFastDelivery: false,
+                byRating: 0,
+                searchQuery: ""
+            }
+        
+        default:
+            return state
+    }
+}
