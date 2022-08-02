@@ -11,8 +11,8 @@ const SingleProduct = ({ product }) => {
         <Card>
           <Card.Img variant='top' src={image} alt={`image of ${image}`}
             style={{
-              width: "200px",
-              aspectRatio: 1 / 1,
+              width: "20vw",
+              height: "40vh",
               objectFit: "cover",
               margin: "0 auto"
             }}
