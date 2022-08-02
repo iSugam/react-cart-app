@@ -34,23 +34,25 @@ const Cart = () => {
                         </Col>
 
                         <Col md={2}>
-                          <Form.Select 
+                          <Form.Control
+                            as="select"
                             value={qty}
-                            onChange={e => dispatch({
-                              type: "CHANGE_CART_QTY",
-                              payload: {
-                                id,
-                                qty: Number(e.target.value)
+                            onChange={(e) => {
+                              dispatch({
+                                  type: "CHANGE_CART_QTY",
+                                  payload: {
+                                    id: id,
+                                    qty: e.target.value,
+                                  },
+                                })
                               }
-                            })}
+                            }
                           >
-                            <option value={1}>1</option>
-                            <option value={2}>2</option>
-                            <option value={3}>3</option>
-                            <option value={4}>4</option>
-                            <option value={5}>5</option>
+                              {[...Array(inStock).keys()].map(stock => {
+                                return <option key={stock + 1}>{stock + 1}</option>
+                              })}
                             
-                          </Form.Select>
+                          </Form.Control>
                         </Col>
 
                         <Col md={2}> 
