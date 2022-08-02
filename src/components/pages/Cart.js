@@ -17,7 +17,7 @@ const Cart = () => {
       {
         cart.length > 0 ?
           <div className='cart-items'>
-            <ListGroup>
+            <ListGroup className='list-group'>
               {
                 cart.map(item => {
                   const {id, name, price, image, rating, inStock, qty} = item
