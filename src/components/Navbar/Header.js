@@ -31,27 +31,14 @@ const Header = () => {
                 />
             </Navbar.Text>
 
-            <Nav>
-                <Dropdown align={{ sm:"right" }}>
+
+                <Dropdown className='dropdown'>
                     <Dropdown.Toggle variant="dark">
                         <RiShoppingCart2Fill color="white" fontSize= "25px" />
                         <Badge bg='dark'>{cart.length}</Badge>
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu 
-                        style={
-                            {
-                                minWidth: 200, 
-                                width: 370, 
-                                maxWidth: 370, 
-                                padding: 20, 
-                                minHeight: "100%",
-                                maxHeight: 400, 
-                                overflowY: "scroll", 
-                                overflowX: "hidden",
-                                float: "right"
-                            }}
-                    >
+                    <Dropdown.Menu className='dropdown-menu'>
                         {/* CART Items in dropdown menu */}
                         {
                             cart.length > 0 ?
@@ -90,7 +77,7 @@ const Header = () => {
                         
                     </Dropdown.Menu>
                 </Dropdown>
-            </Nav>
+
         </Container>
     </Navbar>
   )
