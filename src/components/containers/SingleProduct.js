@@ -14,6 +14,7 @@ const SingleProduct = ({ product }) => {
               width: "20vw",
               height: "40vh",
               objectFit: "cover",
+              objectPosition: "center",
               margin: "0 auto"
             }}
           />
