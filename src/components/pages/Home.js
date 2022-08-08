@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Filter from '../containers/Filter/Filter';
 import SingleProduct from '../containers/SingleProduct';
 import { CartContext } from '../Hooks/Context'
 import "./home.css"
 
 const Home = () => {
+  const [active, setActive] = useState(false)
   const { state: {products},
   filterState: {byPrice,
     byStock,
@@ -49,7 +50,8 @@ const Home = () => {
   }
   return (
     <div className="home">
-          <Filter />
+      <button className='filter-btn-mobile' onClick={() => setActive(!active)}>Filter Products</button>
+          <Filter active={active} filterClose={() => setActive(!active)}/>
           <div className="all-products">
             {
               filteredProducts().map(product => {
