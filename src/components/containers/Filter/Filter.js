@@ -1,9 +1,10 @@
 import React from 'react'
 import { Form, Button } from "react-bootstrap"
+import { AiOutlineClose } from 'react-icons/ai'
 import { CartContext } from '../../Hooks/Context'
 import Rating from './Rating'
 
-const Filter = () => {
+const Filter = ({ active, filterClose }) => {
 
     const {filterState: {
         byPrice,
@@ -23,7 +24,8 @@ const Filter = () => {
     searchQuery);
 
   return (
-    <div className='filter bg-dark'>
+    <div className={active? "filter bg-dark active" : "filter bg-dark"}>
+        <span onClick={filterClose}><AiOutlineClose className='filter-close'/></span>
         <span className="title">Filter Products</span>
         <span>
             <Form.Check
