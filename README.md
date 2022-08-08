@@ -1,5 +1,7 @@
 # Cart App
 
+## Don't mind the images, as those are completely random from faker.js 😅
+
 ### Learning to build cart app - by RoadsideCoder
 - Youtube Link: [RoadsideCoder](https://www.youtube.com/watch?v=HptuMAUaNGk&t=1167s)
 
