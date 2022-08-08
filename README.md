@@ -7,3 +7,5 @@
 
 - Studied the tutorial to understand how the contextAPI works with useReducer.
 - Also made some changes to my code because most of the functions from faker.js version 6 have been deprecated.
+
+- Website URL: [Live Site](https://react-cart-app.netlify.app/)
