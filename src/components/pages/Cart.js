@@ -7,10 +7,10 @@ import { CartContext } from '../Hooks/Context'
 const Cart = () => {
   const { state: {cart}, dispatch } = CartContext();
 
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState()
 
   useEffect(() => {
-    setTotal(cart.reduce((acc, current) => acc + Number(current.price) ,0) )
+    setTotal(cart.reduce((acc, current) => acc + Number(current.price) * current.qty ,0) )
   }, [cart])
   return (
     <div className='cart-page'>
