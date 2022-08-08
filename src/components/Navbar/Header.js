@@ -56,7 +56,7 @@ const Header = () => {
                                             type: "REMOVE_FROM_CART",
                                             payload: item
                                             })}
-                                        color = "red"
+                                        color = "#dc3545"
                                         fontSize={30}
                                         padding={20}
                                         cursor = "pointer"
