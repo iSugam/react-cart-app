@@ -95,7 +95,9 @@
     max-height: 400px; 
     overflow-X: hidden;
     overflow-Y: scroll; 
-    transform: translateX(-77%);
+    transform: translateX(-78%);
+    box-shadow: 0 5px 10px #0005;
+    border-radius: 10px;
 }
 
 .filter-btn-mobile {
@@ -156,7 +158,6 @@
         z-index: 999;
         transition: transform 200ms;
         width: max-content;
-        position: relative;
     }
 
     .filter.active {
@@ -185,5 +186,22 @@
         font-weight: bolder;
         font-size: 20px;
         border: 1px solid #0003;
+        background-color: rgb(253, 255, 226);
+    }
+}
+
+@media (max-width: 420px) {
+
+    .nav-logo a {
+        font-size: 16px !important;
+    }
+    
+    .search {
+        width: 15vw !important;
+        margin-left: -120px !important;
+    }
+
+    .dropdown-menu { 
+        transform: translateX(-74%);
     }
 }
