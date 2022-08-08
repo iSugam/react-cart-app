@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Navbar bg="info" style={{height: 80, position:"fixed", width:"100%", zIndex: 999, top: 0, left: 0}}>
         <Container>
-            <Navbar.Brand>
+            <Navbar.Brand className='nav-logo'>
                 <Link to="/">Cart App</Link>
             </Navbar.Brand>
             <Navbar.Text className='search'>
