@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, FormControl, Nav, Navbar, Dropdown, Badge, Button} from "react-bootstrap";
+import {Container, FormControl, Navbar, Dropdown, Badge, Button} from "react-bootstrap";
 import { AiFillDelete } from 'react-icons/ai';
 import { RiShoppingCart2Fill } from "react-icons/ri"
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { CartContext } from '../Hooks/Context';
 const Header = () => {
 
     const {state: { cart }, dispatch} = CartContext(); // For Adding To Cart
-    const {filterState: {searchQuery}, filterDispatch} = CartContext(); // For Search
+    const {filterState: filterDispatch} = CartContext(); // For Search
 
   return (
     <Navbar bg="info" style={{height: 80, position:"fixed", width:"100%", zIndex: 999, top: 0, left: 0}}>
@@ -45,7 +45,7 @@ const Header = () => {
                             cart.map(item => {
                                 const {id, name, image, price} = item
 
-                               return <div key={item.id} className="cartItems">
+                               return <div key={id} className="cartItems">
                                     <img src={image} alt={name} />
                                     <div className='cart-name-price'>
                                         <span>{name}</span>
