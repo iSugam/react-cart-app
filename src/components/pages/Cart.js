@@ -25,7 +25,7 @@ const Cart = () => {
                     return <ListGroup.Item key={id} style={{marginTop: 20, border: "1px solid #0003", borderRadius: 5}}>
                       <Row>
                         <Col md={2}>
-                          <img src={image} alt={`image of ${name}`} />
+                          <Image src={image} alt={`image of ${name}`} />
                         </Col>
                         <Col md={2}>{name}</Col>
                         <Col md={2}>${price}</Col>
