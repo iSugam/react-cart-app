@@ -7,7 +7,7 @@ import "./home.css"
 const Home = () => {
   const [active, setActive] = useState(false)
   const { state: {products},
-  filterState: {byPrice,
+  filterState: {
     byStock,
     byFastDelivery,
     byRating,
